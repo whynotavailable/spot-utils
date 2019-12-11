@@ -1,0 +1,11 @@
+<p>home works!</p>
+<button *ngIf="viewModel.user === null" type="button" (click)="login()">login</button>
+<div *ngIf="viewModel.user !== null">
+    {{viewModel.user.email}}
+    <div *ngIf="tracks.length !== 0">
+        Tracks Loaded
+        <input type="text" [(value)]="viewModel.playlistName">
+        <button type="button" (click)="generatePlaylist()">Generate Playlist</button>
+    </div>
+    <button type="button" (click)="loadTracks()">Load Tracks</button>
+</div>
